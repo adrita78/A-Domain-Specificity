@@ -4,9 +4,9 @@
 This repository contains both BERT (Bidirectional Encoder Representations from Transformers) and LSTM (Long Short-Term Memory) models implemented for sequence classification. These models are trained on a custom dataset and can be used to make predictions on new sequences.
 
 # Requirements
-Python 3.x
-PyTorch
-Transformers library (Hugging Face)
+- Python 3.x
+- PyTorch
+- Transformers library (Hugging Face)
 
 # Dataset
 The dataset used for training, validation, and testing is located in the data directory. It consists of sequences and their corresponding labels in a tab-separated values (TSV) format. Each line in the TSV file represents a sequence-label pair.
