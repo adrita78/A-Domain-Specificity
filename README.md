@@ -10,6 +10,8 @@ This repository contains both BERT (Bidirectional Encoder Representations from T
 - [PyTorch](https://pytorch.org/get-started/locally/) >= 1.4
 - Transformers library (Hugging Face)
 
+Once you have installed the dependencies and downloaded the dataset, you can run the code by opening the Notebooks in your Google Colab environment.
+
 # Dataset
 The dataset used for training, validation, and testing is located in the data directory. It consists of sequences and their corresponding labels in a tab-separated values (TSV) format. Each line in the TSV file represents a sequence-label pair.
 
