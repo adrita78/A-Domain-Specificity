@@ -65,7 +65,9 @@ The training pipeline consists of the following steps:
 
 **Define Loss Function and Optimizer
 
+
 -criterion: The loss function for training the model, which is the cross-entropy loss in this case.
+
 -optimizer: The optimizer used to update the model parameters, in this case, Adam optimizer with a learning rate of 0.01.
 
 ## Training Loop
