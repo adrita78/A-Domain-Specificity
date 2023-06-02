@@ -15,9 +15,11 @@ The dataset used for training, validation, and testing is located in the data di
 
 ## Model Architecture
 **BERT Model**
+
 The BERT model used for sequence classification consists of a pre-trained BERT base model followed by a classification layer. The pre-trained BERT base model is loaded from the bert-base-uncased checkpoint provided by the Transformers library. The classification layer is a fully connected layer that maps the BERT output to the number of classes.
 
 **LSTM Model**
+
 The LSTM model used for sequence classification consists of an embedding layer, an LSTM layer, and a classification layer. The embedding layer converts the input sequences into dense vectors. The LSTM layer processes the sequence data and captures sequential dependencies. The classification layer maps the LSTM output to the number of classes.
 
 To run the AdomainDataset class, you can follow these steps:
