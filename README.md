@@ -23,7 +23,7 @@ The dataset used for training, validation, and testing is located in the data di
 
 -**Sizes of the Splits**: The sizes of the splits are determined based on the provided ratios and the length of the dataset. The train_size is calculated as 80% of the dataset length (int(0.8 * len(dataset))), the val_size is calculated as 10% of the dataset length (int(0.1 * len(dataset))), and the test_size is calculated as the remaining portion after allocating sizes for training and validation sets.
 
--Split Datasets: The random_split() function returns three separate dataset objects: train_dataset, val_dataset, and test_dataset, corresponding to the training, validation, and test sets, respectively. Each dataset object contains a subset of the original dataset.
+-**Split Datasets**: The random_split() function returns three separate dataset objects: train_dataset, val_dataset, and test_dataset, corresponding to the training, validation, and test sets, respectively. Each dataset object contains a subset of the original dataset.
 
 ## Model Architecture
 **BERT Model**
