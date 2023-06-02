@@ -47,9 +47,8 @@ dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
 
 Iterate over the data loader to access the batches of data during training or evaluation. Each batch will contain a tuple of padded sequences and numerical labels:
 ```angular2html
-for batch in dataloader:
-    padded_sequences, numerical_labels = batch
-    # Use the batch of data for further processing, e.g., feeding it to a model for training or evaluation
+batch_size = 32
+dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
 
 ```
 
@@ -59,9 +58,40 @@ The data file should be in the format where each line contains a sequence and it
 SEQUENCE1	LABEL1
 SEQUENCE2	LABEL2
 ...
+```
+## Training Pipeline
 
+The training pipeline consists of the following steps:
+
+**Define Loss Function and Optimizer
+
+-criterion: The loss function for training the model, which is the cross-entropy loss in this case.
+-optimizer: The optimizer used to update the model parameters, in this case, Adam optimizer with a learning rate of 0.01.
+
+## Training Loop
+
+```angular2html
+def train(model, dataloader, criterion, optimizer):
+    model.train()
+    running_loss = 0.0
+    correct_predictions = 0
+    total_predictions = 0
+
+    for inputs, labels in dataloader:
+        optimizer.zero_grad()
+        inputs = inputs.to(device)
+        labels = labels.to(device)
+        outputs = model(inputs)
+        loss = criterion(outputs, labels)
+        loss.backward()
+        optimizer.step()
 
 ```
+
+
+
+
+
 
 
 
