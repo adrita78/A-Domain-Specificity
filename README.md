@@ -15,6 +15,16 @@ Once you have installed the dependencies and downloaded the dataset, you can run
 # Dataset
 The dataset used for training, validation, and testing is located in the data directory. It consists of sequences and their corresponding labels in a tab-separated values (TSV) format. Each line in the TSV file represents a sequence-label pair.
 
+# Data Splitting
+
+-Train-Validation-Test Split: The dataset is divided into three parts based on the provided ratios: 80% for training, 10% for validation, and the remaining 10% for testing. These ratios can be adjusted depending on the specific requirements of your task.
+
+-torch.utils.data.random_split(): This function is used to perform the random splitting of the dataset. It takes two arguments: the dataset to be split (dataset) and a list specifying the sizes of each split ([train_size, val_size, test_size]).
+
+-Sizes of the Splits: The sizes of the splits are determined based on the provided ratios and the length of the dataset. The train_size is calculated as 80% of the dataset length (int(0.8 * len(dataset))), the val_size is calculated as 10% of the dataset length (int(0.1 * len(dataset))), and the test_size is calculated as the remaining portion after allocating sizes for training and validation sets.
+
+-Split Datasets: The random_split() function returns three separate dataset objects: train_dataset, val_dataset, and test_dataset, corresponding to the training, validation, and test sets, respectively. Each dataset object contains a subset of the original dataset.
+
 ## Model Architecture
 **BERT Model**
 
